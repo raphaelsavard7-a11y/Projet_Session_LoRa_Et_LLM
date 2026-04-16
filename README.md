@@ -22,7 +22,7 @@
 | Fonctionnalité | Description |
 |---|---|
 | **LoRa Bidirectionnel** | Communication 868 MHz via SX1262 (RadioLib), protocole JSON, Sync Word `0x67` |
-| **LLM Intégré** | Appel API NanoGPT — personnalité « Stella la licorne » qui réagit au potentiomètre |
+| **LLM Intégré** | Appel API NanoGPT — personnalité « licorne » qui réagit au potentiomètre |
 | **MQTT en temps réel** | Publication WebSocket sur broker MQTT avec état complet du système |
 | **Contrôle LED intelligent** | LEDs PWM sur les deux boards avec effet de respiration sinusoïdal |
 | **Écran OLED** | Dashboard sur émetteur (pot + statut) et texte LLM complet sur récepteur |
@@ -33,7 +33,7 @@
 1. **L'utilisateur** appuie sur le bouton (IO0) du **sender**
 2. Le **sender** lit le potentiomètre et envoie la valeur par **LoRa**
 3. Le **receiver** reçoit, appelle le **LLM** avec la valeur du potentiomètre
-4. Le LLM (Stella 🦄) décide de l'état de la LED (`ON` / `OFF` / `BLINK`) et génère un message poétique
+4. Le LLM (🦄) décide de l'état de la LED (`ON` / `OFF` / `BLINK`) et génère un message poétique
 5. Le **receiver** publie le résultat sur **MQTT** et renvoie la décision par **LoRa**
 6. Le **sender** reçoit et contrôle sa LED en conséquence
 7. Les deux LEDs (sender + receiver) reflètent la décision de l'IA
