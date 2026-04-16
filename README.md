@@ -49,9 +49,7 @@
 │   ├── auth.h.example         # ⬅ Copier en auth.h et remplir
 │   └── auth.h                 # (ignoré par git)
 │
-├── LoRaSender_Example/        # Code exemple de référence
-├── LoRaReceiver_Example/      # Code exemple de référence
-└── WifiAndLLMAndPotentiometer/# Prototype WiFi + LLM + Pot
+└── README.md
 ```
 
 ## 🚀 Installation
