@@ -1,0 +1,30 @@
+# Fichiers de credentials (NE JAMAIS COMMIT)
+**/auth.h
+!**/auth.h.example
+**/config.h
+!**/config.example.h
+!**/config.h.example
+
+# Fichiers de build Arduino
+build/
+*.elf
+*.bin
+*.hex
+*.map
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+*.swp
+*.swo
+*~
+
+# Tests locaux
+test_mqtt*.py
+
+# Fichier prompt original
+Prompt.txt

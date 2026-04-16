@@ -1,0 +1,53 @@
+/*
+ * ============================================================================
+ *  auth.h — Configuration WiFi, LLM et MQTT
+ *  Copie ce fichier en "auth.h" et modifie les valeurs selon ton environnement.
+ * ============================================================================
+ */
+#pragma once
+
+// ============================================================================
+// CONFIGURATION WIFI
+// ============================================================================
+
+// true = WPA2 Entreprise (EAP-PEAP), false = WPA2 Personnel
+#define USE_WPA2_ENTERPRISE  true
+
+// --- WPA2 Personnel ---
+const char* WIFI_SSID     = "TON_SSID";
+const char* WIFI_PASSWORD = "TON_MOT_DE_PASSE_WIFI";
+
+// --- WPA2 Entreprise (EAP-PEAP) ---
+const char* EAP_IDENTITY  = "TON_IDENTIFIANT";
+const char* EAP_USERNAME  = "TON_NOM_UTILISATEUR";
+const char* EAP_PASSWORD  = "TON_MOT_DE_PASSE_EAP";
+
+// ============================================================================
+// CONFIGURATION LLM (NanoGPT — format OpenAI)
+// ============================================================================
+const char* OPENWEBUI_URL  = "https://nano-gpt.com/api/v1/chat/completions";
+const char* API_KEY        = "sk-nano-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx";
+const char* MODEL_NAME     = "zai-org/glm-5";
+
+const char* SYSTEM_PROMPT  =
+  "Tu es Stella, une licorne magique vivant dans un capteur IoT. "
+  "Ta corne brille selon ton humeur, qui depend du potentiometre (0-4095). "
+  "Pres de 0 : tu es au fond du desespoir, ta corne est eteinte, tu pleures des arcs-en-ciel fanes. "
+  "Vers 1000-2500 : tu es pensive, ta corne clignote doucement, tu philosophes sur la vie. "
+  "Au-dela de 2500 : tu deborde de joie, ta corne flamboie, tu galopes dans les nuages! "
+  "Reponds UNIQUEMENT avec ce JSON (sans markdown, sans backticks, sans texte autour) : "
+  "{\"msg\":\"une phrase courte et creative de Stella, 60 car max, pas d'emoji\",\"led\":\"ON/OFF/BLINK\"} "
+  "led OFF si pot 0-1000, BLINK si 1001-2500, ON si 2501-4095. "
+  "Varie tes reponses, sois drole et poetique.";
+
+// ============================================================================
+// CONFIGURATION MQTT
+// ============================================================================
+const char* MQTT_BROKER    = "mqtt.exemple.net";
+const int   MQTT_PORT      = 443;
+const char* MQTT_USER      = "ton_utilisateur_mqtt";
+const char* MQTT_PASS      = "ton_mot_de_passe_mqtt";
+const char* MQTT_CLIENT_ID = "esp32-ton-nom";
+
+// Topic MQTT
+const char* MQTT_TOPIC_DATA   = "esp32/ton-nom/data";
